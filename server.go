@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/YMajid/gin-poc/controller"
+	"github.com/YMajid/gin-poc/service"
 	"github.com/gin-gonic/gin"
-	"gitlab.com/pragmaticreviews/golang-gin-poc/controller"
-	"gitlab.com/pragmaticreviews/golang-gin-poc/service"
 )
 
 var (
@@ -18,7 +18,7 @@ func main() {
 		ctx.JSON(200, videoController.FindAll())
 	})
 
-	server.POST("/videos", func(ctx *gin.Context) {
+	server.POST("/posts", func(ctx *gin.Context) {
 		ctx.JSON(200, videoController.Save(ctx))
 	})
 

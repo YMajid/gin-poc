@@ -1,6 +1,5 @@
-module gitlab.com/pragmaticreviews/golang-gin-poc
+module github.com/YMajid/gin-poc
 
-go 1.12
+go 1.16
 
-require github.com/gin-gonic/gin v1.5.0
-
+require github.com/gin-gonic/gin v1.7.1

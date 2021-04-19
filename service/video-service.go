@@ -1,20 +1,18 @@
 package service
 
-import "gitlab.com/pragmaticreviews/golang-gin-poc/entity"
+import "github.com/YMajid/gin-poc/entity"
 
 type VideoService interface {
-	Save(entity.Video) entity.Video
+	Save(entity.VideoService) entity.Video
 	FindAll() []entity.Video
 }
 
-type videoService struct {
+type VideoService struct {
 	videos []entity.Video
 }
 
 func New() VideoService {
-	return &videoService{
-		videos: []entity.Video{},
-	}
+	return &videoService{}
 }
 
 func (service *videoService) Save(video entity.Video) entity.Video {
