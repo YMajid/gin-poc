@@ -3,16 +3,18 @@ package service
 import "github.com/YMajid/gin-poc/entity"
 
 type VideoService interface {
-	Save(entity.VideoService) entity.Video
+	Save(entity.Video) entity.Video
 	FindAll() []entity.Video
 }
 
-type VideoService struct {
+type videoService struct {
 	videos []entity.Video
 }
 
 func New() VideoService {
-	return &videoService{}
+	return &videoService{
+		videos: []entity.Video{},
+	}
 }
 
 func (service *videoService) Save(video entity.Video) entity.Video {
