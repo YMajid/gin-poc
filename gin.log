@@ -2,13 +2,21 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] GET    /videos                   --> main.main.func1 (5 handlers)
-[GIN-debug] POST   /videos                   --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (4): 
+	- 
+	- footer.html
+	- header.html
+	- index.html
+
+[GIN-debug] GET    /api/videos               --> main.main.func1 (5 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /view/videos              --> github.com/YMajid/gin-poc/controller.VideoController.ShowAll-fm (5 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [21 Apr 21 08:10 EDT] POST /videos 400 315.581µs 
-::1 - [21 Apr 21 08:10 EDT] POST /videos 400 304.303µs 
-::1 - [21 Apr 21 08:10 EDT] POST /videos 400 422.037µs 
-::1 - [21 Apr 21 08:10 EDT] POST /videos 200 168.776µs 
-::1 - [21 Apr 21 08:10 EDT] POST /videos 400 146.404µs 
-::1 - [21 Apr 21 08:10 EDT] POST /videos 200 169.396µs 
-::1 - [21 Apr 21 08:11 EDT] GET /videos 200 8.07353ms 
+::1 - [22 Apr 21 09:07 EDT] GET /videos 404 243.752µs 
+::1 - [22 Apr 21 09:07 EDT] POST /api/videos 200 273.787µs 
+::1 - [22 Apr 21 09:07 EDT] GET /api/videos 200 223.387µs 
+::1 - [22 Apr 21 09:07 EDT] GET /videos 401 26.147µs 
+::1 - [22 Apr 21 09:08 EDT] GET /videos 404 146.18µs 
+::1 - [22 Apr 21 09:08 EDT] GET /view/videos 200 6.500813ms 
